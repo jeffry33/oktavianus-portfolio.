@@ -35,3 +35,6 @@ npm start
 2. Replace the portrait crop with a clean original transparent PNG if available. The current crop is derived from the supplied poster and may retain some background details.
 3. The supplied CV is included at `public/files/Oktavianus-Jeffry-Pradhana-CV.pdf` and linked from the contact slide.
 4. Review experience descriptions and dates for accuracy.
+
+
+<!-- Portfolio deployment setup verified -->
