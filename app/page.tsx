@@ -129,7 +129,9 @@ export default function Home() {
           <motion.section key={active} className={`slide slide-${active + 1}`} custom={direction} variants={slideVariants} initial="initial" animate="animate" exit="exit">
             {active === 0 && <>
               <div className="hero-kicker"><span className="white-rule"/> SOFTWARE TESTING &amp; QUALITY ENGINEERING</div>
-              <div className="hero-title" aria-label="Quality Assurance"><span>QUALITY</span><span>ASSURANCE</span></div>
+              <div className="hero-title" aria-label="Quality Assurance">
+                {['QUALITY', 'ASSURANCE'].map((word) => <span className="hero-word" key={word}>{Array.from(word).map((letter, i) => <span className="hero-char" key={i} style={{ '--char-index': i } as React.CSSProperties}><span className="hero-char-inner">{letter}</span></span>)}</span>)}
+              </div>
               <Portrait className="hero-portrait" />
               <div className="hero-bottom-name"><strong>OKTAVIANUS<br/>JEFFRY</strong><i/></div>
               <div className="hero-specialties">{['TESTING','AUTOMATION','FINANCE','INSURANCE','BANKING'].map(x => <span key={x}>{x}</span>)}<i/></div>
