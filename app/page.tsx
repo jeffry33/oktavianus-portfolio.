@@ -130,7 +130,7 @@ export default function Home() {
             {active === 0 && <>
               <div className="hero-kicker"><span className="white-rule"/> SOFTWARE TESTING &amp; QUALITY ENGINEERING</div>
               <div className="hero-title" aria-label="Quality Assurance">
-                {['QUALITY', 'ASSURANCE'].map((word) => <span className="hero-word" key={word}>{Array.from(word).map((letter, i) => <span className="hero-char" key={i} style={{ '--char-index': i } as React.CSSProperties}><span className="hero-char-inner">{letter}</span></span>)}</span>)}
+                {['QUALITY', 'ASSURANCE'].map((word, wordIndex) => <span className="hero-word" key={word}>{Array.from(word).map((letter, i) => <span className="hero-char" key={i} style={{ '--char-index': i + wordIndex * 8 } as React.CSSProperties}><span className="hero-char-inner">{letter}</span></span>)}</span>)}
               </div>
               <Portrait className="hero-portrait" />
               <div className="hero-bottom-name"><strong>OKTAVIANUS<br/>JEFFRY</strong><i/></div>
